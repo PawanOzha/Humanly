@@ -12,7 +12,10 @@ import { EASE, h2, INK, LINE, MUTED } from "@/lib/tokens";
 const CURL = `curl https://app.humanora.app/api/v1/humanize \\
   -H "Authorization: Bearer hum_live_..." \\
   -H "Content-Type: application/json" \\
-  -d '{"text": "Paste at least fifty characters of your draft here.", "tone": "standard"}'`;
+  -d '{
+    "text": "Paste at least fifty characters of your draft.",
+    "tone": "standard"
+  }'`;
 
 const r = API_LIMITS.ratePerMin;
 const FEATURES = [
