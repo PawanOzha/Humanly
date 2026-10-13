@@ -1,5 +1,6 @@
 "use client";
 
+import { LINKS } from "@/lib/links";
 import { useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Ico } from "@/components/icons";
@@ -68,7 +69,7 @@ export function Features() {
           <div style={{ fontSize: 19, fontWeight: 500, letterSpacing: "-0.01em" }}>{c.t}</div>
           <div style={{ fontSize: 14.5, color: MUTED, lineHeight: 1.5, marginTop: 6 }}>{c.d}</div>
         </SpotCard></Rise>))}</div>
-      <div style={{ textAlign: "center", marginTop: 48 }}><Magnetic><Btn href="#tool">Get started {Ico.arrow}</Btn></Magnetic></div>
+      <div style={{ textAlign: "center", marginTop: 48 }}><Magnetic><Btn href={LINKS.signup}>Get started {Ico.arrow}</Btn></Magnetic></div>
     </section>
   );
 }

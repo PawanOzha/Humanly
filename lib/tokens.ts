@@ -1,6 +1,6 @@
 import type React from "react";
 
-export const BRAND = "Humanly";
+export const BRAND = "Humanora";
 export const FOUNDER = "The founder";
 export const BG = "#f7f7f4";
 export const INK = "#11120f";

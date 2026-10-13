@@ -17,7 +17,7 @@ const MAX_BYTES = 15 * 1024 * 1024;
 
 function describe(err: unknown) {
   const message = err instanceof Error ? err.message : "";
-  if (!message || message === "Failed to fetch") return "Humanly can't be reached right now. Try again in a moment.";
+  if (!message || message === "Failed to fetch") return "Humanora can't be reached right now. Try again in a moment.";
   return message;
 }
 
@@ -85,7 +85,7 @@ export function PdfCheck() {
       setName(fileName);
       setPages(nextPages);
       setText(joined.slice(0, MAX));
-      if (joined.length > MAX) setNote(`Humanly reads the first ${formatWords(MAX)} characters of a document.`);
+      if (joined.length > MAX) setNote(`Humanora reads the first ${formatWords(MAX)} characters of a document.`);
     } catch (error) {
       if (job.current !== mine) return;
       setPages([]);
@@ -187,7 +187,7 @@ export function PdfCheck() {
               <button type="button" className="db-drop" disabled={busy} onClick={() => input.current?.click()}>
                 <span className="db-drop-icon"><Mark name="upload" size={22} /></span>
                 <strong>{reading ? "Reading your PDF…" : "Drop a PDF here, or browse"}</strong>
-                <span>Humanly reads the text layer and scores it the way it scores a draft. Up to 15 MB.</span>
+                <span>Humanora reads the text layer and scores it the way it scores a draft. Up to 15 MB.</span>
               </button>
             ) : sentences.length > 0 ? (
               <p className="db-prose">

@@ -5,6 +5,7 @@ import Lenis from "lenis";
 import { FooterReveal } from "@/components/layout/footer-reveal";
 import { Navbar } from "@/components/layout/navbar";
 import { ScrollBar } from "@/components/layout/scroll-bar";
+import { Api } from "@/components/sections/api";
 import { Compare } from "@/components/sections/compare";
 import { FAQ } from "@/components/sections/faq";
 import { Features } from "@/components/sections/features";
@@ -97,6 +98,7 @@ export function LandingPage() {
       <Statement />
       <HowItWorks />
       <Features />
+      <Api />
       <Pricing />
       <FAQ />
       <FooterReveal />

@@ -1,5 +1,6 @@
 "use client";
 
+import { LINKS } from "@/lib/links";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { Btn } from "@/components/ui/btn";
@@ -28,7 +29,7 @@ export function Letter() {
       </motion.div>
       <Rise style={{ marginTop: 28 }}>
         <p style={{ ...h2, fontSize: "clamp(24px, 2.6vw, 36px)", maxWidth: 720, margin: "0 auto" }}>When your words sound like you, people actually read them — and the more gets done, faster.</p>
-        <div style={{ marginTop: 32 }}><Btn variant="light" href="#">About us</Btn></div>
+        <div style={{ marginTop: 32 }}><Btn variant="light" href={LINKS.signup}>Get started free</Btn></div>
       </Rise>
     </section>
   );

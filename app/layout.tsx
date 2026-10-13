@@ -4,9 +4,16 @@ import { AccountProvider } from "@/components/auth/provider";
 import { ConsentBanner } from "@/components/guest/notice";
 import "./globals.css";
 
+const TITLE = "Humanora — AI humanizer";
+const DESCRIPTION = "Paste a draft. Humanora marks exactly which sentences read as AI, then rewrites them in a natural voice.";
 export const metadata: Metadata = {
-  title: "Humanly — AI humanizer",
-  description: "Paste a draft. We mark exactly which sentences read as AI, then rewrite them in a natural voice.",
+  metadataBase: new URL("https://humanora.app"),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: "Humanora",
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", url: "https://humanora.app", siteName: "Humanora", title: TITLE, description: DESCRIPTION, locale: "en_US" },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

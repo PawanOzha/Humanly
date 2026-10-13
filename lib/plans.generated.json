@@ -1,0 +1,75 @@
+{
+  "source": "humanizer/app/lib/billing/plans.ts",
+  "trialWords": 25000,
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Free",
+      "tagline": "For trying Humanora out.",
+      "words": 2000,
+      "period": "day",
+      "usd": null,
+      "features": [
+        "2,000 words every day",
+        "All tones and levels",
+        "AI-detection highlights",
+        "Sentence rewrites"
+      ],
+      "highlight": false,
+      "badge": null,
+      "trialDays": null
+    },
+    {
+      "id": "plus",
+      "name": "Plus",
+      "tagline": "For regular writing.",
+      "words": 100000,
+      "period": "month",
+      "usd": {
+        "month": 12,
+        "year": 120
+      },
+      "features": [
+        "100,000 words a month",
+        "Everything in Free",
+        "Long documents in one run",
+        "Priority queue"
+      ],
+      "highlight": false,
+      "badge": null,
+      "trialDays": 7
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "tagline": "For teams and heavy use.",
+      "words": 1200000,
+      "period": "month",
+      "usd": {
+        "month": 100,
+        "year": 1000
+      },
+      "features": [
+        "1,200,000 words a month",
+        "Everything in Plus",
+        "Lowest cost per word",
+        "Priority support"
+      ],
+      "highlight": true,
+      "badge": "Best value",
+      "trialDays": 7
+    }
+  ],
+  "api": {
+    "ratePerMin": {
+      "free": 10,
+      "plus": 60,
+      "pro": 300
+    },
+    "concurrency": {
+      "free": 1,
+      "plus": 2,
+      "pro": 4
+    }
+  }
+}

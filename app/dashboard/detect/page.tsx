@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Workspace } from "@/components/dashboard/workspace";
 
 export const metadata: Metadata = {
-  title: "AI detection — Humanly",
+  title: "AI detection — Humanora",
   description: "Score a draft sentence by sentence.",
 };
 

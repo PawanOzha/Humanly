@@ -6,13 +6,14 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/
 import { AccountChip } from "@/components/auth/account-chip";
 import { Logo } from "@/components/ui/logo";
 import { Magnetic } from "@/components/ui/magnetic";
+import { LINKS } from "@/lib/links";
 import { useSession, useSignOut } from "@/lib/session";
 import { useAuth } from "@/lib/stores/auth";
 import { EASE, GLASS_BG, GLASS_EDGE, GLASS_ON, INK, LINE } from "@/lib/tokens";
 
 const MotionLink = motion.create(Link);
 
-const NAV = [{ l: "How it works", h: "#how" }, { l: "Examples", h: "#examples" }, { l: "Pricing", h: "#pricing" }, { l: "FAQ", h: "#faq" }];
+const NAV = [{ l: "How it works", h: "#how" }, { l: "Examples", h: "#examples" }, { l: "API", h: "#api" }, { l: "Pricing", h: "#pricing" }, { l: "FAQ", h: "#faq" }];
 
 type Pill = { x: number; w: number; h: number };
 
@@ -82,12 +83,12 @@ export function Navbar() {
                 </>
               ) : (
                 <>
-                  <Link className="hm-login" href="/login" style={{ padding: "6px 13px", fontSize: 14, fontWeight: 450, letterSpacing: "-0.01em", color: INK, textDecoration: "none" }}>Log in</Link>
+                  <a className="hm-login" href={LINKS.login} style={{ padding: "6px 13px", fontSize: 14, fontWeight: 450, letterSpacing: "-0.01em", color: INK, textDecoration: "none" }}>Log in</a>
                   <Magnetic>
-                    <MotionLink href="/signup" whileTap={{ scale: 0.985 }} transition={{ type: "tween", duration: 0.16, ease: EASE }}
+                    <motion.a href={LINKS.signup} whileTap={{ scale: 0.985 }} transition={{ type: "tween", duration: 0.16, ease: EASE }}
                       style={{ display: "inline-flex", alignItems: "center", background: INK, color: "#fff", textDecoration: "none", fontSize: 14, fontWeight: 500, letterSpacing: "-0.01em", padding: "8px 16px", borderRadius: 999, boxShadow: "inset 0 .5px 0 rgba(255,255,255,.22), 0 1px 2px rgba(17,18,15,.2)" }}>
-                      Start free trial
-                    </MotionLink>
+                      Get started
+                    </motion.a>
                   </Magnetic>
                 </>
               )}
@@ -120,10 +121,10 @@ export function Navbar() {
                   </button>
                 </>
               ) : (
-                <MotionLink href="/login" onClick={() => setOpen(false)} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.04 * NAV.length, duration: 0.28, ease: EASE }}
+                <motion.a href={LINKS.login} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.04 * NAV.length, duration: 0.28, ease: EASE }}
                   style={{ display: "block", padding: "12px 14px", fontSize: 17, fontWeight: 450, letterSpacing: "-0.015em", color: INK, textDecoration: "none", borderRadius: 14 }}>
                   Log in
-                </MotionLink>
+                </motion.a>
               )}
             </motion.div>
           )}

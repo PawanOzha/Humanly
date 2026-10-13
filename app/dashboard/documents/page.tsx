@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Documents } from "@/components/dashboard/documents";
 
 export const metadata: Metadata = {
-  title: "Documents — Humanly",
+  title: "Documents — Humanora",
   description: "Your saved checks and rewrites.",
 };
 

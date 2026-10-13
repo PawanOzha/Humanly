@@ -2627,3 +2627,8 @@ a.hm-menu-item {
   .au-sheet h1,
   .au-done h1 { font-size: 36px; }
 }
+
+/* API section: features + code side by side, stacked on small screens. */
+.hm-api > * { min-width: 0; }
+.hm-api { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: start; }
+@media (max-width: 860px) { .hm-api { grid-template-columns: minmax(0, 1fr); gap: 36px; } }

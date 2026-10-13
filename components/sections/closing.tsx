@@ -7,6 +7,7 @@ import { Logo } from "@/components/ui/logo";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Rise } from "@/components/ui/rise";
 import { Sticky } from "@/components/ui/sticky";
+import { LINKS } from "@/lib/links";
 import { scrollToY } from "@/lib/smooth-scroll";
 import { BRAND, EASE, h2, INK, RED } from "@/lib/tokens";
 
@@ -22,7 +23,11 @@ function NameTag() {
 }
 
 export function Closing() {
-  const cols = [["Product", ["How it works", "Examples", "Pricing", "FAQ"]], ["Company", ["About", "Blog", "Contact"]], ["Legal", ["Privacy", "Terms"]]] as const;
+  const cols = [
+    ["Product", [["How it works", "#how"], ["Examples", "#examples"], ["Pricing", "#pricing"], ["FAQ", "#faq"]]],
+    ["Developers", [["API", "#api"], ["API docs", LINKS.docs], ["API keys", LINKS.apiKeys]]],
+    ["Account", [["Get started", LINKS.signup], ["Log in", LINKS.login], ["Plans", LINKS.plans]]],
+  ] as const;
   return (
     <section className="hm-green" style={{ position: "relative", color: "#fff", overflow: "hidden", padding: "150px 20px 40px" }}>
       <div style={{ position: "absolute", left: 40, top: 70 }} className="hm-hide-s"><NameTag /></div>
@@ -40,7 +45,7 @@ export function Closing() {
           <div><Logo light /><p style={{ color: "rgba(255,255,255,.55)", fontSize: 14.5, lineHeight: 1.6, maxWidth: 280, marginTop: 16 }}>AI detection and humanizing that shows its work.</p></div>
           {cols.map(([t, ls]) => (
             <div key={t}><div className="hm-mono" style={{ fontSize: 11.5, letterSpacing: ".08em", color: "rgba(255,255,255,.45)", marginBottom: 16 }}>{t.toUpperCase()}</div>
-              <div style={{ display: "grid", gap: 11 }}>{ls.map((l) => <motion.a key={l} href="#" whileHover={{ x: 3 }} transition={{ type: "tween", duration: 0.2, ease: EASE }} style={{ color: "#fff", textDecoration: "none", fontSize: 15 }}>{l}</motion.a>)}</div></div>))}
+              <div style={{ display: "grid", gap: 11 }}>{ls.map(([l, h]) => <motion.a key={l} href={h} whileHover={{ x: 3 }} transition={{ type: "tween", duration: 0.2, ease: EASE }} style={{ color: "#fff", textDecoration: "none", fontSize: 15 }}>{l}</motion.a>)}</div></div>))}
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 70, paddingTop: 24, borderTop: "1px solid rgba(255,255,255,.12)", fontSize: 13, color: "rgba(255,255,255,.5)", flexWrap: "wrap", gap: 12 }}>
           <span>© {new Date().getFullYear()} {BRAND}. All rights reserved.</span>

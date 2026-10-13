@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { LINKS } from "@/lib/links";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { useAuth } from "@/lib/stores/auth";
@@ -128,13 +128,13 @@ export function GuestNote({ onTrim }: { onTrim: () => void }) {
               <p className="hm-note-body">{copy.body}</p>
             </div>
             <div className="hm-note-actions">
-              <Link href={gate === "words" ? "/login?next=%2F" : "/signup?next=%2F"} className="hm-note-ink">
+              <a href={gate === "words" ? LINKS.login : LINKS.signup} className="hm-note-ink">
                 {gate === "words" ? "Log in" : "Create account"}
-              </Link>
+              </a>
               {gate === "words" ? (
                 <button type="button" className="hm-note-ghost" onClick={() => { onTrim(); useGuest.getState().close(); }}>Keep first 500</button>
               ) : (
-                <Link href="/login?next=%2F" className="hm-note-ghost">Log in</Link>
+                <a href={LINKS.login} className="hm-note-ghost">Log in</a>
               )}
             </div>
             <button type="button" className="hm-note-close" aria-label="Dismiss" onClick={() => useGuest.getState().close()}>

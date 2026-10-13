@@ -83,7 +83,7 @@ function attach(sock: WebSocket) {
     if (msg.op === "error") {
       window.clearTimeout(waiter.timer);
       waiters.delete(msg.id);
-      waiter.reject(new LiveError(msg.message || "Humanly could not finish that", msg.code || "", msg.guest));
+      waiter.reject(new LiveError(msg.message || "Humanora could not finish that", msg.code || "", msg.guest));
       return;
     }
     if (msg.usage) onUsage?.(msg.usage);
@@ -96,7 +96,7 @@ function attach(sock: WebSocket) {
   };
   sock.onclose = () => {
     if (socket === sock) socket = null;
-    failAll(new LiveError("Connection to Humanly dropped"));
+    failAll(new LiveError("Connection to Humanora dropped"));
   };
 }
 
@@ -110,7 +110,7 @@ function connect(): Promise<WebSocket> {
       sock.close();
       if (opening) {
         opening = null;
-        reject(new LiveError("Humanly is offline"));
+        reject(new LiveError("Humanora is offline"));
       }
     }, 4000);
     sock.onopen = () => {
@@ -123,7 +123,7 @@ function connect(): Promise<WebSocket> {
       if (sock.readyState === WebSocket.OPEN) return;
       window.clearTimeout(timer);
       opening = null;
-      reject(new LiveError("Humanly is offline"));
+      reject(new LiveError("Humanora is offline"));
     };
   });
   return opening;
@@ -157,7 +157,7 @@ export async function liveJob(
   await new Promise<void>((resolve, reject) => {
     const timer = window.setTimeout(() => {
       waiters.delete(id);
-      reject(new LiveError("Humanly took too long"));
+      reject(new LiveError("Humanora took too long"));
     }, 130_000);
     waiters.set(id, { onEvent, resolve, reject, timer });
     sock.send(JSON.stringify({ op, id, text, mode, consent }));

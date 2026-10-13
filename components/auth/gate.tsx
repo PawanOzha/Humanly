@@ -35,7 +35,7 @@ function Unreachable() {
     <div className="db-boot" role="alert">
       <div className="db-boot-card">
         <span className="db-boot-icon" aria-hidden>!</span>
-        <h1>We can&apos;t reach Humanly</h1>
+        <h1>We can&apos;t reach Humanora</h1>
         <p>Your connection may be down, or the service is restarting. Your documents are safe.</p>
         <div>
           <button type="button" className="db-btn db-btn-ink" onClick={() => void bootstrapAccount()}>

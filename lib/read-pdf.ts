@@ -40,5 +40,5 @@ export function pdfFailure(error: unknown) {
   const name = error instanceof Error ? error.name : "";
   if (name === "PasswordException") return "This PDF is password protected.";
   if (name === "InvalidPDFException") return "That file isn’t a readable PDF.";
-  return "Humanly couldn’t read that PDF.";
+  return "Humanora couldn’t read that PDF.";
 }

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:plans": "node --no-warnings scripts/sync-plans.mjs",
+    "prebuild": "npm run sync:plans"
   },
   "dependencies": {
     "lenis": "^1.3.26",

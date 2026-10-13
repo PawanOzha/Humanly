@@ -253,7 +253,7 @@ export function HowPanel() {
   const View = VIEWS[step];
 
   return (
-    <aside className="au-right" aria-label="How Humanly marks a draft, rewrites it, and checks the result.">
+    <aside className="au-right" aria-label="How Humanora marks a draft, rewrites it, and checks the result.">
       <div className="au-glow" aria-hidden />
       <div className="au-right-in">
         <div>

@@ -31,7 +31,7 @@ function isCurrent(href: string, path: string) {
 
 function Brand() {
   return (
-    <Link href="/" className="db-brand" aria-label="Humanly home">
+    <Link href="/" className="db-brand" aria-label="Humanora home">
       <svg width="28" height="28" viewBox="0 0 30 30" aria-hidden>
         <circle cx="15" cy="15" r="15" fill="#d4f26a" />
         <g stroke={INK} strokeWidth="2.6" strokeLinecap="round">
@@ -40,7 +40,7 @@ function Brand() {
           <path d="M21.5 11.2l-13 7.6" />
         </g>
       </svg>
-      <span>Humanly</span>
+      <span>Humanora</span>
     </Link>
   );
 }

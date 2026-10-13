@@ -151,7 +151,7 @@ export function Tool() {
     } catch (err) {
       if (job.current !== mine) return;
       setPhase("idle"); setOrigView([]); setScore(0); setBefore(null); setDocLabel(""); setBeforeLabel("");
-      if (!gateFor(err)) setFault(err instanceof Error ? err.message : "Humanly is offline");
+      if (!gateFor(err)) setFault(err instanceof Error ? err.message : "Humanora is offline");
     }
   };
   const humanize = async () => {
@@ -177,7 +177,7 @@ export function Tool() {
     } catch (err) {
       if (job.current !== mine) return;
       setPhase(origView.length ? "scanned" : "idle");
-      if (!gateFor(err)) setFault(err instanceof Error ? err.message : "Humanly is offline");
+      if (!gateFor(err)) setFault(err instanceof Error ? err.message : "Humanora is offline");
     }
   };
   const copy = async () => { await navigator.clipboard.writeText(output); setCopied(true); setTimeout(() => setCopied(false), 1600); };

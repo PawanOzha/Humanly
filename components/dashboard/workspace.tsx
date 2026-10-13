@@ -158,7 +158,7 @@ export function Workspace({ intent = "write" }: { intent?: "detect" | "write" })
       setPhase("idle");
       setSentences([]);
       setScore(null);
-      setFault(describe(err, "Humanly can't be reached right now. Try again in a moment."));
+      setFault(describe(err, "Humanora can't be reached right now. Try again in a moment."));
     }
   };
 
@@ -203,7 +203,7 @@ export function Workspace({ intent = "write" }: { intent?: "detect" | "write" })
       if (job.current !== mine) return;
       setPhase("idle");
       setOutput("");
-      setFault(describe(err, "Humanly can't be reached right now. Try again in a moment."));
+      setFault(describe(err, "Humanora can't be reached right now. Try again in a moment."));
     }
   };
 

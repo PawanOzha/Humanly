@@ -163,7 +163,7 @@ export function AuthScreen() {
   const dest = useRef("/dashboard");
 
   useEffect(() => {
-    document.title = signup ? "Create account — Humanly" : "Log in — Humanly";
+    document.title = signup ? "Create account — Humanora" : "Log in — Humanora";
   }, [signup]);
 
   // Switching between log in and sign up starts the form fresh.
@@ -234,7 +234,7 @@ export function AuthScreen() {
       setStatus("idle");
       setVia(null);
       const message = err instanceof Error ? err.message : "Couldn't sign in.";
-      setErrors({ form: message === "Failed to fetch" ? "Humanly is offline." : message });
+      setErrors({ form: message === "Failed to fetch" ? "Humanora is offline." : message });
     });
   };
 
@@ -379,7 +379,7 @@ export function AuthScreen() {
                       {signup ? "Already have an account? " : "New here? "}
                       <button type="button" onClick={() => switchMode(signup ? "login" : "signup")}>{signup ? "Log in" : "Create an account"}</button>
                     </p>
-                    {signup && <p className="au-legal">By continuing you agree to Humanly&apos;s terms.</p>}
+                    {signup && <p className="au-legal">By continuing you agree to Humanora&apos;s terms.</p>}
                   </motion.div>
                 )}
               </AnimatePresence>
