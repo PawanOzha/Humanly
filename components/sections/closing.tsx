@@ -51,7 +51,7 @@ export function Closing() {
           <span>© {new Date().getFullYear()} {BRAND}. All rights reserved.</span>
           <button onClick={() => scrollToY(0)} style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", fontFamily: "inherit", fontSize: 13 }}>Back to top ↑</button>
         </div>
-        <div aria-hidden style={{ fontSize: "clamp(80px, 22vw, 300px)", lineHeight: 0.8, letterSpacing: "-0.06em", textAlign: "center", marginTop: 50, color: "rgba(255,255,255,.07)", userSelect: "none", whiteSpace: "nowrap", overflow: "hidden" }}>{BRAND}</div>
+        <div aria-hidden style={{ fontSize: "clamp(64px, 19vw, 240px)", lineHeight: 0.8, letterSpacing: "-0.06em", textAlign: "center", marginTop: 50, color: "rgba(255,255,255,.07)", userSelect: "none", whiteSpace: "nowrap", overflow: "hidden" }}>{BRAND}</div>
       </footer>
     </section>
   );
