@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { AccountProvider } from "@/components/auth/provider";
 import { ConsentBanner } from "@/components/guest/notice";
@@ -8,14 +8,18 @@ const TITLE = "Humanora – AI Humanizer & AI Text Detector";
 const DESCRIPTION = "Rewrite AI-generated text in a natural voice. Humanora scores each sentence for AI-like patterns, highlights them, and rewrites them in a Balanced, Academic or Casual tone.";
 export const metadata: Metadata = {
   metadataBase: new URL("https://humanora.app"),
-  title: TITLE,
+  title: { default: TITLE, template: "%s" },
   description: DESCRIPTION,
   applicationName: "Humanora",
+  appleWebApp: { title: "Humanora", statusBarStyle: "default" },
+  formatDetection: { telephone: false },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: { type: "website", url: "https://humanora.app", siteName: "Humanora", title: TITLE, description: DESCRIPTION, locale: "en_US" },
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
+
+export const viewport: Viewport = { themeColor: "#f7f7f4" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

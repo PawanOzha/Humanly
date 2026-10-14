@@ -27,6 +27,7 @@ export function Closing() {
     ["Product", [["How it works", "#how"], ["Examples", "#examples"], ["Pricing", "#pricing"], ["FAQ", "#faq"]]],
     ["Developers", [["API", "#api"], ["API docs", LINKS.docs], ["API keys", LINKS.apiKeys]]],
     ["Account", [["Get started", LINKS.signup], ["Log in", LINKS.login], ["Plans", LINKS.plans]]],
+    ["Company", [["About", "/about"], ["Contact", "/contact"], ["Security", "/security"], ["Privacy", "/privacy"], ["Terms", "/terms"], ["Cookies", "/cookies"], ["Refunds", "/refund"]]],
   ] as const;
   return (
     <section className="hm-green" style={{ position: "relative", color: "#fff", overflow: "hidden", padding: "150px 20px 40px" }}>

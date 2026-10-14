@@ -826,7 +826,7 @@ body {
 
 .hm-foot {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
   gap: 40px;
 }
 
@@ -2632,3 +2632,34 @@ a.hm-menu-item {
 .hm-api > * { min-width: 0; }
 .hm-api { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: start; }
 @media (max-width: 860px) { .hm-api { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
+
+/* ---------- Trust & legal pages ---------- */
+.hm-legal { min-height: 100vh; background: #f7f7f4; color: #11120f; font-family: var(--hm-font-sans); }
+.hm-legal-top { max-width: 1100px; margin: 0 auto; padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.hm-legal-brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+.hm-legal-nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
+.hm-legal-nav a { color: #11120f; text-decoration: none; }
+.hm-legal-nav a.hm-legal-cta { background: #11120f; color: #fff; padding: 9px 16px; border-radius: 999px; }
+.hm-doc { max-width: 760px; margin: 0 auto; padding: 64px 20px 96px; }
+.hm-doc-kicker { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #6f726b; margin: 0 0 14px; }
+.hm-doc-title { font-size: clamp(38px, 6vw, 60px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 500; margin: 0; }
+.hm-doc-updated { color: #6f726b; font-size: 14px; margin: 16px 0 0; }
+.hm-doc-intro { font-size: 19px; line-height: 1.6; color: #34362f; margin-top: 28px; }
+.hm-doc-body { margin-top: 36px; font-size: 16.5px; line-height: 1.7; color: #24261f; }
+.hm-doc-body h2 { font-size: 24px; letter-spacing: -0.02em; font-weight: 500; margin: 48px 0 12px; padding-top: 24px; border-top: 1px solid rgba(17,18,15,.08); }
+.hm-doc-body h3 { font-size: 18px; font-weight: 600; margin: 26px 0 8px; }
+.hm-doc-body ul { padding-left: 22px; }
+.hm-doc-body li { margin: 6px 0; }
+.hm-doc-body a { color: #11120f; text-underline-offset: 3px; }
+.hm-doc-body table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 14px 0; }
+.hm-doc-body th, .hm-doc-body td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid rgba(17,18,15,.1); }
+.hm-doc-body th { font-weight: 600; background: rgba(17,18,15,.03); }
+.hm-todo { background: #fde68a; color: #11120f; padding: 0 4px; border-radius: 4px; }
+.hm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0; }
+.hm-card { background: #fff; border: 1px solid rgba(17,18,15,.08); border-radius: 16px; padding: 20px; }
+.hm-card h3 { margin-top: 0; }
+.hm-legal-foot { max-width: 1100px; margin: 0 auto; padding: 32px 20px 48px; border-top: 1px solid rgba(17,18,15,.08); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 14px; color: #6f726b; }
+.hm-legal-foot nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.hm-legal-foot a { color: #11120f; text-decoration: none; }
+.hm-legal-foot p { margin: 0; }
+@media (max-width: 640px) { .hm-legal-nav a:not(.hm-legal-cta) { display: none; } }

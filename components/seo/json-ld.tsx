@@ -14,7 +14,7 @@ export function JsonLd() {
     ...(t.usd ? { priceSpecification: { "@type": "UnitPriceSpecification", price: String(t.usd.month), priceCurrency: "USD", unitCode: "MON" } } : {}),
   }));
   const graph = [
-    { "@type": "Organization", "@id": `${SITE}/#org`, name: "Humanora", url: SITE, logo: `${SITE}/icon.svg` },
+    { "@type": "Organization", "@id": `${SITE}/#org`, name: "Humanora", url: SITE, logo: { "@type": "ImageObject", url: `${SITE}/logo.png`, width: 512, height: 512 }, image: `${SITE}/logo.png` },
     { "@type": "WebSite", "@id": `${SITE}/#website`, name: "Humanora", url: SITE, publisher: { "@id": `${SITE}/#org` }, inLanguage: "en" },
     {
       "@type": "SoftwareApplication",
