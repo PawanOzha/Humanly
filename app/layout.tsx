@@ -4,14 +4,15 @@ import { AccountProvider } from "@/components/auth/provider";
 import { ConsentBanner } from "@/components/guest/notice";
 import "./globals.css";
 
-const TITLE = "Humanora — AI humanizer";
-const DESCRIPTION = "Paste a draft. Humanora marks exactly which sentences read as AI, then rewrites them in a natural voice.";
+const TITLE = "Humanora – AI Humanizer & AI Text Detector";
+const DESCRIPTION = "Rewrite AI-generated text in a natural voice. Humanora scores each sentence for AI-like patterns, highlights them, and rewrites them in a Balanced, Academic or Casual tone.";
 export const metadata: Metadata = {
   metadataBase: new URL("https://humanora.app"),
   title: TITLE,
   description: DESCRIPTION,
   applicationName: "Humanora",
   alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: { type: "website", url: "https://humanora.app", siteName: "Humanora", title: TITLE, description: DESCRIPTION, locale: "en_US" },
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
