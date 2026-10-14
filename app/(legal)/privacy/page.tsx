@@ -66,7 +66,10 @@ export default function Privacy() {
 
       <h2>5. Retention</h2>
       <ul>
-        <li><strong>Account data, documents, API keys, sessions and logs</strong>: kept while your account is active, and cleaned up after 30 days of inactivity. Deleting a document removes it straight away. Deleting your account removes all of these.</li>
+        <li><strong>Documents, rewrite history, session records and API usage logs</strong>: kept while your account is active. If your account has no sign-in or use (app or API) for 30 days, an automatic daily job deletes your documents and their rewrite history, all session records (IP address and browser), and your API key activity log, daily usage counts and last-used IP. Deleting a document removes it straight away.</li>
+        <li><strong>Your account itself</strong> (name, email, sign-in methods, plan, word balance and API keys) is not deleted for inactivity, so you can come back. Delete it any time yourself (see below).</li>
+        <li><strong>Ended sessions</strong>: records of sessions that expired or were signed out are deleted 30 days after they end, for every account.</li>
+        <li><strong>Server logs</strong> (for example sign-in and security events, with masked email addresses) are rotated automatically and are not kept per account.</li>
         <li><strong>Sessions</strong>: expire after 12 hours, or 30 days with &ldquo;remember me&rdquo;.</li>
         <li><strong>After account deletion</strong> we keep a one-way hash of your email address with your remaining free-word balance, and sign-up records (IP, device ID, hashed email), so deleting and re-creating an account cannot reset free limits. These hold no readable email address.</li>
         <li><strong>Billing records</strong>: kept as long as tax and accounting law requires. Paddle keeps its own records under its privacy policy.</li>
@@ -77,7 +80,7 @@ export default function Privacy() {
       <ul>
         <li><strong>Correct</strong>: change your name, photo and settings in the app.</li>
         <li><strong>Delete documents</strong>: delete them one by one in the app.</li>
-        <li><strong>Delete your account</strong>: Settings → Account → Delete account. Cancel any active subscription first so you are not charged again. If you cannot delete it yourself, email <Mail v={C.privacyEmail} /> from the account&rsquo;s address and we will do it.</li>
+        <li><strong>Delete your account</strong>: Settings → Danger zone → Delete account. You confirm with your password, or, if you sign in only with Google, by signing in to Google again. Cancel any active subscription first so you are not charged again. Deletion removes your account, documents, rewrite history, API keys, sessions and Google connection at once. If you cannot delete it yourself, email <Mail v={C.privacyEmail} /> from the account&rsquo;s address and we will do it.</li>
         <li><strong>Disconnect Google</strong>: you can also remove Humanora at <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>.</li>
         <li><strong>Access or export</strong>: email <Mail v={C.privacyEmail} />. We reply within 30 days.</li>
       </ul>

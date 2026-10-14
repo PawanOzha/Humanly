@@ -12,7 +12,7 @@ export const COMPANY = {
   securityEmail: "support@humanora.app",
   modelHosting: "GPU servers that Humanora operates through a GPU cloud hosting provider",
   dbRegion: "a PostgreSQL database on servers operated by Humanora",
-  logRetention: "kept while your account is active, and cleaned up after 30 days of inactivity",
+  logRetention: "kept while your account is active; after 30 days with no sign-in or use, your documents, rewrite history, session records and API usage logs are deleted automatically",
   refundWindow: "[TODO: refund window, e.g. 14 days]",
   minAge: "16",
   updated: "October 14, 2026",
