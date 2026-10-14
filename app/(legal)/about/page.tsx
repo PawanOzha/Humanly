@@ -18,12 +18,12 @@ export default function About() {
       <h2>What we believe</h2>
       <ul>
         <li>Detection scores are estimates. We show the reasons, not just a number, so you can judge for yourself.</li>
-        <li>Your writing belongs to you. You can delete it at any time.</li>
+        <li>Your writing belongs to you. We never use it to train models, and you can delete it at any time.</li>
         <li>Be honest with your readers, schools and employers about how you use AI. See our <Link href="/terms#acceptable-use">acceptable use rules</Link>.</li>
       </ul>
 
       <h2>Who we are</h2>
-      <p>Humanora is built and operated by <T v={C.legalName} />, based in <T v={C.address} />. <T v="[TODO: one or two sentences about the founder/team and why Humanora exists]" /></p>
+      <p>Humanora is built by a small independent team based in Kathmandu, Nepal. We train and run our own humanizing model instead of reselling a third-party AI API, and we never use your text to train it. We build Humanora because we think people who write with AI deserve a tool that explains itself.</p>
 
       <p><Link href="/contact">Contact us</Link> · <Link href="/security">Security & Trust</Link></p>
     </Doc>

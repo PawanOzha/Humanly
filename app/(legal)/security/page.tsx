@@ -8,6 +8,7 @@ export default function Security() {
   return (
     <Doc kicker="Trust" title="Security & Trust" intro={<p>You trust us with your writing. This page lists the concrete measures we use today. We have not yet completed any third-party security certification, and we will only claim one once we have it.</p>}>
       <div className="hm-cards">
+        <div className="hm-card"><h3>Never used for training</h3><p>Text you submit is never used to train AI models. It is processed by our own model, not a third-party AI API.</p></div>
         <div className="hm-card"><h3>No Gmail access</h3><p>Google sign-in asks only for your basic profile and email address. We cannot read your mail, contacts or files.</p></div>
         <div className="hm-card"><h3>No card data</h3><p>Payments go through Paddle. Card details never touch our servers.</p></div>
         <div className="hm-card"><h3>Your text, your control</h3><p>Delete any document, or your whole account, from inside the app.</p></div>
@@ -33,6 +34,7 @@ export default function Security() {
       <ul>
         <li>All traffic is encrypted with HTTPS and served through Cloudflare.</li>
         <li>Payment webhooks are signature-verified before they change anything.</li>
+        <li>Account data and logs are kept while your account is active and cleaned up after 30 days of inactivity.</li>
         <li>Deleting your account removes your documents, API keys and sessions from our database.</li>
       </ul>
 

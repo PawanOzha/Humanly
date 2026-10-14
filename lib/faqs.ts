@@ -8,5 +8,6 @@ export const FAQS: [string, string][] = [
   ["Can I check text without rewriting it?", "Yes. “Check AI score” marks up your draft without changing a word."],
   ["Is there a free plan?", `Yes. Free includes ${fmt(TIERS[0].words)} words every day, no card needed. Paste a draft above to try it now.`],
   ["Is there a free trial of the paid plans?", `Yes. Plus and Pro start with a 7-day free trial that includes ${fmt(TRIAL_WORDS)} words. Cancel before it ends and you won't be charged.`],
+  ["Is my text used to train AI models?", "No. Text you submit is never used to train models. It is processed by Humanora's own fine-tuned model, not sent to a third-party AI API, and you can delete your documents at any time."],
   ["Is there an API?", "Yes. Create a personal API key in Settings and call the REST API to humanize or check text. It uses the same word allowance as the app."],
 ];

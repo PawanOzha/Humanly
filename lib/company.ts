@@ -4,17 +4,17 @@
  */
 export const COMPANY = {
   brand: "Humanora",
-  legalName: "[TODO: legal entity name, e.g. registered company or sole proprietor]",
-  address: "[TODO: registered business address]",
-  jurisdiction: "[TODO: governing law / country]",
-  supportEmail: "[TODO: support email, e.g. support@humanora.app]",
-  privacyEmail: "[TODO: privacy email, e.g. privacy@humanora.app]",
-  securityEmail: "[TODO: security email, e.g. security@humanora.app]",
-  modelHosting: "[TODO: where the writing model runs, e.g. our own servers in <country> / provider name]",
-  dbRegion: "[TODO: country/region where the database is hosted]",
-  logRetention: "[TODO: how long server and audit logs are kept, e.g. 30 days]",
+  legalName: "Humanora",
+  address: "Kathmandu, Nepal 44600",
+  jurisdiction: "Nepal",
+  supportEmail: "support@humanora.app",
+  privacyEmail: "support@humanora.app",
+  securityEmail: "support@humanora.app",
+  modelHosting: "GPU servers that Humanora operates through a GPU cloud hosting provider",
+  dbRegion: "a PostgreSQL database on servers operated by Humanora",
+  logRetention: "kept while your account is active, and cleaned up after 30 days of inactivity",
   refundWindow: "[TODO: refund window, e.g. 14 days]",
-  minAge: "[TODO: minimum age, e.g. 13 or 16]",
+  minAge: "16",
   updated: "October 14, 2026",
 } as const;
 

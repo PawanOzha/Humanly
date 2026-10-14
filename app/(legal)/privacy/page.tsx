@@ -11,6 +11,7 @@ export default function Privacy() {
       <ul>
         <li>We collect what we need to run your account: your name, email address and, if you use Google sign-in, your Google profile name and photo.</li>
         <li>We ask Google only for <code>openid email profile</code>. We <strong>cannot read your Gmail</strong>, contacts, Drive or anything else in your Google account.</li>
+        <li><strong>Your text is never used to train AI models.</strong></li>
         <li>Text you paste is processed to detect and rewrite it. For signed-in users it is saved as documents until you delete them.</li>
         <li>Payments are handled by Paddle. We never see or store your card number.</li>
         <li>We do not sell your personal data and we do not use advertising trackers.</li>
@@ -37,8 +38,8 @@ export default function Privacy() {
       <p>Visitors who try the free checker on the homepage without an account: the text is sent to our servers to be scored and rewritten, and a cookie plus your network address are used to count free checks. We do not ask for your name or email.</p>
 
       <h2>2. How we use your text</h2>
-      <p>Your text is sent to our writing model to score and rewrite it. The model runs at: <T v={C.modelHosting} />.</p>
-      <p>Training: <T v="[TODO: state clearly whether submitted text is ever used to train or improve models. If not, say: 'We do not use your text to train models.']" /></p>
+      <p><strong>We never use the text you submit to train or improve AI models.</strong></p>
+      <p>Your text is scored and rewritten by Humanora&rsquo;s own custom fine-tuned humanizing model. It runs on <T v={C.modelHosting} />. We do not send your text to any third-party AI service such as an external chatbot or language-model API.</p>
       <p>We do not publish your text, and staff access it only when needed to operate the service, fix a problem you report, or comply with the law.</p>
 
       <h2>3. Legal bases (EEA/UK users)</h2>
@@ -57,6 +58,7 @@ export default function Privacy() {
           <tr><td>Google</td><td>Optional &ldquo;Sign in with Google&rdquo;</td><td>Sign-in request; Google returns your basic profile to us</td></tr>
           <tr><td>Cloudflare</td><td>Network delivery, DDoS protection and the Turnstile bot check on sign-up and log-in</td><td>IP address, request metadata, browser signals for the bot check</td></tr>
           <tr><td>Google Fonts</td><td>Fonts on humanora.app</td><td>Your IP address and browser details when the font files load</td></tr>
+          <tr><td>GPU cloud hosting provider</td><td>Provides the GPU servers our own model runs on</td><td>Text being processed, only while it is processed</td></tr>
           <tr><td>Hosting and database</td><td>Runs the app and stores data in <T v={C.dbRegion} /></td><td>All account data described above</td></tr>
         </tbody>
       </table>
@@ -64,12 +66,11 @@ export default function Privacy() {
 
       <h2>5. Retention</h2>
       <ul>
-        <li><strong>Account, documents, API keys and sessions</strong>: kept while your account exists. Deleting a document removes it. Deleting your account removes all of these.</li>
+        <li><strong>Account data, documents, API keys, sessions and logs</strong>: kept while your account is active, and cleaned up after 30 days of inactivity. Deleting a document removes it straight away. Deleting your account removes all of these.</li>
         <li><strong>Sessions</strong>: expire after 12 hours, or 30 days with &ldquo;remember me&rdquo;.</li>
         <li><strong>After account deletion</strong> we keep a one-way hash of your email address with your remaining free-word balance, and sign-up records (IP, device ID, hashed email), so deleting and re-creating an account cannot reset free limits. These hold no readable email address.</li>
         <li><strong>Billing records</strong>: kept as long as tax and accounting law requires. Paddle keeps its own records under its privacy policy.</li>
-        <li><strong>Logs</strong>: <T v={C.logRetention} />.</li>
-      </ul>
+              </ul>
 
       <h2>6. Your rights</h2>
       <p>Depending on where you live (for example under the GDPR, UK GDPR or California&rsquo;s CCPA/CPRA), you can ask to access, correct, export or delete your personal data, object to or restrict some processing, and withdraw consent. You will not be treated differently for using these rights.</p>

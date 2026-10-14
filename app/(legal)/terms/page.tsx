@@ -30,7 +30,7 @@ export default function Terms() {
       <p>You are responsible for how you use the output. We may suspend accounts that break these rules.</p>
 
       <h2>4. Your content</h2>
-      <p>You keep all rights to the text you submit and to the output. You give us a limited licence to process and store it only to provide the Service to you. See the <Link href="/privacy">Privacy Policy</Link>.</p>
+      <p>You keep all rights to the text you submit and to the output. You give us a limited licence to process and store it only to provide the Service to you. We never use it to train AI models. See the <Link href="/privacy">Privacy Policy</Link>.</p>
 
       <h2>5. Plans, billing and cancellation</h2>
       <ul>
@@ -57,7 +57,7 @@ export default function Terms() {
       <p>To the extent the law allows, we are not liable for indirect or consequential losses, and our total liability for any claim is limited to the amount you paid us in the 12 months before the claim. Nothing in these terms limits rights you have as a consumer that cannot be limited by law.</p>
 
       <h2>11. Law</h2>
-      <p>These terms are governed by the laws of <T v={C.jurisdiction} />, except where consumer law in your country gives you other rights.</p>
+      <p>These terms are governed by the laws of <T v={C.jurisdiction} />, and disputes go to the courts of Kathmandu, except where consumer law in your country gives you other rights.</p>
 
       <h2>12. Contact</h2>
       <p><T v={C.legalName} />, <T v={C.address} />. Email: <Mail v={C.supportEmail} />.</p>
