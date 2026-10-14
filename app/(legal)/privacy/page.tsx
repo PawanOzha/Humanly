@@ -66,7 +66,8 @@ export default function Privacy() {
 
       <h2>5. Retention</h2>
       <ul>
-        <li><strong>Documents, rewrite history, session records and API usage logs</strong>: kept while your account is active. If your account has no sign-in or use (app or API) for 30 days, an automatic daily job deletes your documents and their rewrite history, all session records (IP address and browser), and your API key activity log, daily usage counts and last-used IP. Deleting a document removes it straight away.</li>
+        <li><strong>Documents, rewrite history, session records and API usage logs</strong>: kept while your account is active. If a <strong>free</strong> account has no sign-in or use (app or API) for 30 days, an automatic daily job deletes your documents and their rewrite history, all session records (IP address and browser), and your API key activity log, daily usage counts and last-used IP. Deleting a document removes it straight away.</li>
+        <li><strong>Paid accounts</strong> are not affected by this cleanup: their data is kept while the subscription is active, including after you cancel until the paid period ends. Once it has ended, the account is treated as a free account.</li>
         <li><strong>Your account itself</strong> (name, email, sign-in methods, plan, word balance and API keys) is not deleted for inactivity, so you can come back. Delete it any time yourself (see below).</li>
         <li><strong>Ended sessions</strong>: records of sessions that expired or were signed out are deleted 30 days after they end, for every account.</li>
         <li><strong>Server logs</strong> (for example sign-in and security events, with masked email addresses) are rotated automatically and are not kept per account.</li>

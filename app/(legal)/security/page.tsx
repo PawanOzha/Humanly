@@ -34,7 +34,7 @@ export default function Security() {
       <ul>
         <li>All traffic is encrypted with HTTPS and served through Cloudflare.</li>
         <li>Payment webhooks are signature-verified before they change anything.</li>
-        <li>After 30 days with no sign-in or use, your documents, rewrite history, session records and API usage logs are deleted automatically. Your account and plan stay so you can come back.</li>
+        <li>For free accounts with no sign-in or use for 30 days, documents, rewrite history, session records and API usage logs are deleted automatically. The account itself stays so you can come back. Paid accounts keep their data while the subscription is active.</li>
         <li>Deleting your account (confirmed with your password, or by signing in to Google again) removes your documents, rewrite history, API keys, sessions and Google connection from our database.</li>
       </ul>
 

@@ -12,13 +12,14 @@ export default function Refund() {
 
       <h2>Refunds</h2>
       <ul>
-        <li>You can request a full refund within <T v={C.refundWindow} /> of your first payment for a plan.</li>
+        <li>You can request a full refund within <T v={C.refundWindow} /> of purchase. The request must reach us (or Paddle) within <T v={C.refundWindow} /> of the time on your Paddle receipt.</li>
+        <li>After <T v={C.refundWindow} />, payments are not refundable, except as below. Cancelling stops future renewals, and you keep your plan until the end of the period you paid for.</li>
         <li>If you were charged by mistake, for example after cancelling or twice for the same period, we will refund the charge.</li>
         <li>Where consumer law in your country gives you a right to withdraw or a refund, that right applies in addition to this policy.</li>
       </ul>
 
       <h2>How to ask</h2>
-      <p>Email <Mail v={C.supportEmail} /> from your account&rsquo;s email address with the date of the charge, or contact Paddle directly through the link in your receipt. Our payments are processed by Paddle, our merchant of record, so refunds are issued by Paddle to your original payment method. They usually appear within 5 to 10 business days, depending on your bank.</p>
+      <p>Within <T v={C.refundWindow} /> of purchase, email <Mail v={C.supportEmail} /> from your account&rsquo;s email address with the date of the charge or your Paddle order number, or contact Paddle directly through the link in your receipt. Our payments are processed by Paddle, our merchant of record, so refunds are issued by Paddle to your original payment method. They usually appear within 5 to 10 business days, depending on your bank.</p>
 
       <p>See also the <Link href="/terms">Terms of Service</Link>.</p>
     </Doc>
